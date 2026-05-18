@@ -1,0 +1,5 @@
+[core]
+    remote = localcache
+    analytics = false
+['remote "localcache"']
+    url = F:/dvc-remote

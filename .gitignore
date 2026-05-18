@@ -1,0 +1,83 @@
+# --- data & artefacts (DVC-tracked) ---
+data/raw/*
+data/processed/*
+!data/**/.gitkeep
+!data/external/
+!data/interim/
+
+models/*
+!models/.gitkeep
+
+submissions/archive/*
+!submissions/archive/v97b.0_cfonly.csv
+!submissions/archive/.gitkeep
+
+submissions/final/*
+!submissions/final/predict_final.py
+!submissions/final/q1_forecast.csv
+!submissions/final/dayi_forecast.csv
+!submissions/final/.gitkeep
+
+# Keep the day-i base forecast (dependency of predict_final.py)
+!submissions/18_05_2026_forecast.csv
+
+# --- experiment tracking ---
+mlruns/
+mlflow.db
+
+# --- DVC internals ---
+/.dvc/cache
+/.dvc/tmp
+/.dvc/plots
+.dvc/config.local
+
+# --- python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+*.egg
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- envs ---
+.venv/
+venv/
+.env
+.python-version
+
+# --- notebooks ---
+.ipynb_checkpoints/
+
+# --- tooling / IDE ---
+.vscode/
+.idea/
+.kiro/
+*.swp
+*.swo
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- hydra runtime ---
+outputs/
+multirun/
+.hydra/
+
+# --- scratch ---
+*.log
+*.tmp
+scratch/
+
+# --- solution drop ---
+solution.zip
+_solution_extracted/
+
+# --- catboost internals ---
+catboost_info/

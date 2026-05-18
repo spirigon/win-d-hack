@@ -1,0 +1,8 @@
+# Training defaults (Hydra) — data-quality-hardening spec.
+# Mirrors the argparse surface of src/training/train_v15_regime.py.
+# See .kiro/specs/data-quality-hardening/design.md §3.
+
+# Opt-in residual-based label-noise second pass. When true, flagged rows'
+# training weights are multiplied by 0.0 (not dropped — lag-history
+# semantics are preserved). See src/data/residual_cleaner.py::flag_residuals.
+residual_clean: false  # Requirement 6.3 — opt-in label-noise cleaner

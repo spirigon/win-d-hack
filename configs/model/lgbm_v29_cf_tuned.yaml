@@ -1,0 +1,14 @@
+# Optuna trial 23 — verified 5-seed Fold-5: 7.5734%
+# Tuned by tune_v27_cf.py (100 trials, CF target, K=70)
+# Note: trial 38 (lr=0.047) was 3-seed noise; trial 23 is the robust choice.
+# Fold-4 nMAE: ~7.09%
+# K: 70
+
+num_leaves: 55
+min_data_in_leaf: 43
+learning_rate: 0.0259476307435388
+feature_fraction: 0.49455788842926784
+bagging_fraction: 0.4229521099231461
+bagging_freq: 3
+lambda_l1: 1.599611931632972
+lambda_l2: 0.0003476780244211917

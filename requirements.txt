@@ -1,0 +1,36 @@
+# Requirements for wind power forecasting pipeline.
+# Install: pip install -r requirements.txt
+#
+# For GPU support (optional, not required for inference):
+#   pip install torch==2.5.1 --extra-index-url https://download.pytorch.org/whl/cu124
+
+# === Core (required for inference) ===
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+scikit-learn==1.5.2
+lightgbm==4.5.0
+
+# === Training from scratch (--from-scratch mode) ===
+pandera==0.22.1
+pyarrow==18.1.0
+
+# === Day-i model (MLP/TFT) ===
+torch==2.5.1
+
+# === Utilities ===
+tqdm==4.67.1
+pyyaml==6.0.2
+
+# === Optional: hyperparameter tuning ===
+# optuna==4.1.0
+
+# === Optional: experiment tracking ===
+# mlflow==2.18.0
+# hydra-core==1.3.2
+
+# === Optional: development ===
+# pytest==8.3.4
+# ruff==0.8.4
+# matplotlib==3.9.2
+# seaborn==0.13.2

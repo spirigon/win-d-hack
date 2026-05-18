@@ -1,0 +1,18 @@
+# DVC pipeline definition.
+#
+# The `fold5_guardrail` stage is a non-regression guardrail for the
+# Data Quality Hardening pack (Requirement 9). It is marked `frozen: true`
+# so `dvc repro` on the full DAG does NOT trigger it; the stage runs only
+# when named explicitly, e.g. `dvc repro fold5_guardrail`.
+stages:
+  fold5_guardrail:
+    cmd: python scripts/measure_fold5_after_hardening.py
+    frozen: true
+    deps:
+      - scripts/measure_fold5_after_hardening.py
+      - src/training
+      - src/utils/seeding.py
+      - src/data
+    outs:
+      - data/processed/fold5_hardened.json:
+          cache: false
